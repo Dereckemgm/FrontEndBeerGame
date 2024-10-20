@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../Pruebas"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "VIEWADMIN"
+	}
+}

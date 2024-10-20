@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <script
+    type="text/javascript"
+    src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"
+></script>
+    <style>
+        .dropdown-menu {
+            display: none; 
+        }
+        .dropdown-menu.show {
+            display: block; 
+        }
+    </style>
+</head>
+<body>
+	<section id="sidebar">
+		<ul class="side-menu top">
+			<li >
+				<a href="../Inicio/index.html">
+					<i class='bx bxs-dashboard' ></i>
+					<span class="text">Inicio</span>
+				</a>
+			</li>
+			<li class="active">
+				<a href="../Usuarios/index.html">
+					<i class='bx bxs-group' ></i>
+					<span class="text">Usuarios</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bxs-doughnut-chart' ></i>
+					<span class="text">Tipos de Usuarios</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bxs-message-dots' ></i>
+					<span class="text">Productos</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bxs-shopping-bag-alt' ></i>
+					<span class="text">Pedidos</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<section id="content">
+		<nav>
+			<i class='bx bx-menu' ></i>
+			<form action="#">
+				<div class="form-input">
+					<input type="search" placeholder="Buscar...">
+					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+				</div>
+			</form>
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode"></label>
+			
+			<a href="#" class="profile">
+				<div class="content1">
+                    <header class="header1">
+                        
+                        <div class="user-info">
+                            <div class="icon" aria-hidden="true">
+                            </div>
+                            <div class="dropdown">
+                                <button class="dropdown-toggle" onclick="toggleDropdown()" aria-haspopup="true" aria-expanded="false">
+                                    <img alt="Avatar de usuario" height="30" src="https://storage.googleapis.com/a1aa/image/e3YG5kSJRzzuOyi75YfmifJHFUkNVfje3kgwoVMeTqy6NZ75E.jpg" width="30">
+                                    <p>ADMIN</p>
+                                </button>
+                                <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                                    <a href="#" role="menuitem">Cerrar Sesión</a>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                </div>
+			</a>
+		</nav>
+		<main>
+            <div class="head-title">
+				<div class="left">
+					<h1>Lista de Usuarios</h1>
+				</div>
+				
+			</div>
+            <div class="table-data">
+				<div class="order">
+					<button class="btn-new">Nuevo</button>
+    <div class="controls">
+        <label for="records">Mostrar</label>
+        <select id="records">
+            <option value="10">10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+        </select>
+        <span>registros</span>
+        <label for="search" style="margin-left:auto;">Buscar:</label>
+        <input type="text" id="search">
+    </div>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre Completo</th>
+                    <th>Correo Electronico</th>
+                    <th>Contraseña</th>
+					<th>Rol</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>María Mercado Rojas</td>
+                    <td>mm@unicolombo.edu.co</td>
+                    <td>26</td>
+					<td>Mayorista</td>
+                    <td>
+                        <button class="btn-edit">Editar</button>
+                        <button class="btn-delete">Borrar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Pedro Medina Ortiz</td>
+                    <td>pedro.medina@unicolombo.edu.co</td>
+                    <td>amigos123</td>
+					<td>Fabrica</td>
+                    <td>
+                        <button class="btn-edit">Editar</button>
+                        <button class="btn-delete">Borrar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Carlos Perez Montero</td>
+                    <td>carlos.perez@unicolombo.edu.co</td>
+                    <td>carlos123</td>
+					<td>Minorista</td>
+                    <td>
+                        <button class="btn-edit">Editar</button>
+                        <button class="btn-delete">Borrar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Ana Maria Linares Torres</td>
+                    <td>ana.linares@unicolombo.edu.co</td>
+                    <td>linaresana283</td>
+					<td>Tienda</td>
+                    <td>
+                        <button class="btn-edit">Editar</button>
+                        <button class="btn-delete">Borrar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+					
+				</div>
+            </div>
+			
+    
+		</main>
+	</section>
+    <script src="script.js"></script>
+</body>
+</html>
