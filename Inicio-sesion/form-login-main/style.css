@@ -1,0 +1,169 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #EEEEEE;
+    height: 100vh;
+    background: hsla(234, 100%, 8%, 0.77);  
+    background: -webkit-linear-gradient(to right, hsla(208, 100%, 29%, 0.722), hsla(234, 100%, 8%, 0.649));  
+    background: linear-gradient(to right, hsla(208, 100%, 29%, 0.676), hsla(234, 100%, 8%, 0.585)), url(img/fondo8.jpeg); 
+
+    
+
+}
+
+.form-login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25rem;
+    background: white;
+    border-radius: 0.6rem;
+}
+
+.form-login h1 {
+    text-align: center;
+    padding: 2% 0% 2% 0%;
+    border-bottom: 0.0625rem solid silver;
+    color: #232D3F;
+    font-weight: 550;
+    font-size: 1.6rem;
+}
+
+.form-login form {
+    padding: 0 2.5rem;
+    box-sizing: border-box;
+}
+
+form .form-login_input {
+    position: relative;
+    border-bottom: 0.125rem solid #adadad;
+    margin: 1.8rem 0;
+}
+
+.form-login_input input {
+    width: 100%;
+    padding: 0 0.3rem;
+    height: 2.5rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.form-login_input label {
+    position: absolute;
+    top: 50%;
+    left: 0.3rem;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.form-login_input span::before {
+    content: '';
+    position: absolute;
+    top: 2.5rem;
+    left: 0;
+    width: 100%;
+    height: 0.125rem;
+    background: #256D85;
+    transition: .5s;
+}
+
+.form-login_input input:focus~label,
+.form-login_input input:focus~label {
+    top: -5px;
+    color: #232D3F;
+    font-size: 1.1rem;
+}
+
+.form-login_input input:focus~span::before,
+.form-login_input input:focus~span::before {
+    width: 100%;
+}
+
+.form-login_forgot {
+    margin: -0.3rem 0 1.25rem 0.3rem;
+    color: blue;
+    cursor: pointer;
+}
+
+.form-login_forgot:hover {
+    text-decoration: underline;
+}
+
+input[type="submit"] {
+    width: 100%;
+    height: 3.125rem;
+    border: 0.06rem solid;
+    background: #EEEEEE;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    color: #232D3F;
+    cursor: pointer;
+    outline: none;
+    justify-content: center;
+}
+
+input[type="submit"]:hover {
+    background-color: rgb(206, 206, 206)
+}
+
+.form-login_register {
+    margin: 1.8rem;
+    text-align: center;
+    font-size: 1rem;
+    color: #232D3F;
+}
+
+.form-login_register a {
+    color: blue;
+    text-decoration: none;
+}
+
+.form-login_register a:hover {
+    text-decoration: underline;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    padding: 0 50px 20px 0;
+}
+.checkbox-container input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #4a4aff;
+    border-radius: 3px;
+    background-color: #4a4aff;
+    position: relative;
+    cursor: pointer;
+}
+.checkbox-container input[type="checkbox"]:checked::before {
+    content: '\2713';
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.checkbox-container label {
+    margin-left: 10px;
+    font-size: 16px;
+    color: #adadad;
+}
+
+.form-login_input input:focus + label,
+.form-login_input input:not(:placeholder-shown) + label {
+    top: -5px;
+    color: #232D3F;
+    font-size: 1.1rem;
+}

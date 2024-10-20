@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form-login">
+        <h1>Inicio de sesión</h1>
+        <form method="post">
+            <div class="form-login_input">
+                <input type="text" required id="username" placeholder=" ">
+                <label for="username">Nombre de usuario</label>
+            </div>
+            <div class="form-login_input">
+                <input type="password" id="contrasena" required placeholder=" ">
+                <label for="contrasena">Contraseña</label>
+            </div>
+            <div class="checkbox-container">
+                <input type="checkbox" id="mostrarContrasena" >
+                <label for="mostrarContrasena">Mostrar contraseña</label>
+            </div>
+            <div class="form-login_forgot">¿Olvidó su contraseña?</div>
+            <input type="submit" value="Iniciar">
+            <div class="form-login_register">
+                ¡Quiero <a href="../sign-up/index.html">registrarme</a>!
+            </div>
+
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
